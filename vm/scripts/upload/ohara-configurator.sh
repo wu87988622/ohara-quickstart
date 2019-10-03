@@ -22,15 +22,8 @@ container_name="ohara-configurator"
 if [ ! "$(docker ps -q -f name=$container_name)" ]; then
   echo -e "\n> Start ohara-configurator..."
 
-  if [[ ! -d "$CONFIGURATOR_FOLDER" ]]; then
-    echo -e "Create folder: $CONFIGURATOR_FOLDER"
-    mkdir -p $CONFIGURATOR_FOLDER
-  fi
-
   docker run --name $container_name --restart=always \
-    -v $CONFIGURATOR_FOLDER:/home/ohara/configurator \
     -p $CONFIGURATOR_PORT:$CONFIGURATOR_PORT \
     -d "oharastream/configurator:$OHARA_VER" \
-    --folder /home/ohara/configurator \
     --port $CONFIGURATOR_PORT
 fi
