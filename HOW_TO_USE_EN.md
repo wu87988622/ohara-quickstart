@@ -79,7 +79,7 @@ Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-55-generic x86_64)
  * Management:     https://landscape.canonical.com
  * Support:        https://ubuntu.com/advantage
 
-HOST=192.168.56.108
+HOST=192.168.56.104
 OHARA_VER=0.8.0-SNAPSHOT
 ```
 
