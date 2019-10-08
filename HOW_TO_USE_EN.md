@@ -312,8 +312,6 @@ OHARA_VER=0.8.0-SNAPSHOT
 
 ### Start Pipeline
 
-![graph_all](vm/images/graph_all.png)
-
 - Click Operate **START_ICON**
 
 ![start_graph](vm/images/start_graph.png)
