@@ -4,13 +4,13 @@
 - [Import OVA](#import-ova)
 - [Add VirtualBox network card](#add-virtualbox-network-card)
 - [Login OharaStream](#login-oharastream)
+  - [Ohara Component](#ohara-component)
 - [Open Ohara Manager](#open-ohara-manager)
 - [Add a node](#add-a-node)
 - [Create a workspace](#create-a-workspace)
-  - [How to download postgresql drive jar?](https://jdbc.postgresql.org/download.html)
 - [Create Two Topics](#create-two-topics)
 - [Upload a stream Jar](#upload-a-stream-jar)
-  - [How to download jar?](https://github.com/oharastream/ohara-quickstart/releases/download/untagged-cf0d3622e4d0954dcb7a/ohara-streamapp.jar)
+  - [[How to download jar?](https://github.com/oharastream/ohara-quickstart/releases/download/untagged-cf0d3622e4d0954dcb7a/ohara-streamapp.jar)](#-how-to-download-jar---https---githubcom-oharastream-ohara-quickstart-releases-download-untagged-cf0d3622e4d0954dcb7a-ohara-streamappjar-)
 - [Add a pipeline](#add-a-pipeline)
   - [Add a JDBC source connector](#add-a-jdbc-source-connector)
   - [Add Two Topics](#add-two-topics)
@@ -43,13 +43,13 @@
 
 - Click Global Tools and then click Create, ensure that the DHCP option is selected to see that the network card has been set up in Windows.
 
-![create_network_windows](vm/images/win_add_network.png)
+![create_network_windows](images/win_add_network.png)
 
 ### Setting network card in vm
 
 - Select the imported ohara-quickstart, click Setting, click Network, click adapter2, select Host-only Adapter, and select the newly added network card.
 
-![setting_network_windows](vm/images/win_setting_network.png)
+![setting_network_windows](images/win_setting_network.png)
 
 ### Mac and Linux user
 
@@ -60,13 +60,13 @@
 
 - Click Tools and then click Create, ensure that the DHCP option is selected to see that the network card has been set up in mac or linux.
 
-![create_network_mac](vm/images/mac_add_network.png)
+![create_network_mac](images/mac_add_network.png)
 
 ### Setting network card in vm
 
 - Select the imported ohara-quickstart, click Setting, click Network, click adapter2, select Host-only Adapter, and select the newly added network card.
 
-![setting_network_mac](vm/images/mac_setting_network.png)
+![setting_network_mac](images/mac_setting_network.png)
 
 ## Login OharaStream
 
@@ -113,7 +113,7 @@ OHARA_VER=0.8.0-SNAPSHOT
 - Click Menu **Nodes**
 - Click **NEW NODE**
 
-![node_list](vm/images/node_list.png)
+![node_list](images/node_list.png)
 
 - Type Node (\${IP})
 - Type Port **22**
@@ -122,18 +122,18 @@ OHARA_VER=0.8.0-SNAPSHOT
 - Click **TEST CONNECTION**
 - Click **ADD**
 
-![new_node](vm/images/new_node.png)
+![new_node](images/new_node.png)
 
 - After the node was added, you can see the newly created node on the Nodes page.
 
-![node_list](vm/images/new_node_list.png)
+![node_list](images/new_node_list.png)
 
 ## Create a workspace
 
 - Click Menu **Workspaces**
 - Click **NEW WORKSPACE**
 
-![workspace_list](vm/images/workspace_list.png)
+![workspace_list](images/workspace_list.png)
 
 **Posgresql is needed in the subsequent process, so we need to upload it to workspace first. ([How to download postgresql drive jar?](https://jdbc.postgresql.org/download.html))**
 
@@ -144,15 +144,15 @@ OHARA_VER=0.8.0-SNAPSHOT
 - Select **postgresql-1.jdbc.jar**
 - Click **ADD**
 
-![new_workspace](vm/images/new_workspace.png)
+![new_workspace](images/new_workspace.png)
 
 - And wait for the setup to complete.
 
-![wait_workspace](vm/images/wait_workspace.png)
+![wait_workspace](images/wait_workspace.png)
 
 - You can see that workspace has been built on the list
 
-![new_workspace_list](vm/images/new_workspace_list.png)
+![new_workspace_list](images/new_workspace_list.png)
 
 ## Create Two Topics
 
@@ -160,7 +160,7 @@ OHARA_VER=0.8.0-SNAPSHOT
 - Click **wk00 Action**
 - Click **TOPICS**
 
-![topic_list](vm/images/topic_list.png)
+![topic_list](images/topic_list.png)
 
 - Click **NEW TOPIC**
 - Type Topic name **topic00**
@@ -168,7 +168,7 @@ OHARA_VER=0.8.0-SNAPSHOT
 - Type Repliction factor **1**
 - Click **ADD**
 
-![new_topic00](vm/images/new_topic00.png)
+![new_topic00](images/new_topic00.png)
 
 - Click **NEW TOPIC**
 - Type Topic name **topic01**
@@ -176,11 +176,11 @@ OHARA_VER=0.8.0-SNAPSHOT
 - Type Repliction factor **1**
 - Click **ADD**
 
-![new_topic01](vm/images/new_topic01.png)
+![new_topic01](images/new_topic01.png)
 
 - You can see two topices to create the completion in the list
 
-![new_topic_list2](vm/images/new_topic_list2.png)
+![new_topic_list2](images/new_topic_list2.png)
 
 ## Upload a stream Jar
 
@@ -190,21 +190,21 @@ OHARA_VER=0.8.0-SNAPSHOT
 - Click **NEW JAR**
 - Upload file **ohara-streamapp.jar**
 
-![stream_list](vm/images/stream_list.png)
+![stream_list](images/stream_list.png)
 
 ## Add a pipeline
 
 - Click Menu **Piplines**
 - Click **NEW PIPELINE**
 
-![pipeline_list](vm/images/pipeline_list.png)
+![pipeline_list](images/pipeline_list.png)
 
 - Type Pipeline name **pipeline**
 - Select Workspace name **wk00**
 - Click **ADD**
 
-![new_pipeline](vm/images/new_pipeline.png)
-![edit_pipeline](vm/images/edit_pipeline.png)
+![new_pipeline](images/new_pipeline.png)
+![edit_pipeline](images/edit_pipeline.png)
 
 ### Add a JDBC source connector
 
@@ -212,12 +212,12 @@ OHARA_VER=0.8.0-SNAPSHOT
 - Select **com.island.ohara.connector.jdbc.source.JDBCSourceConnector**
 - Click **ADD**
 
-![new_source_connector](vm/images/new_source_connector.png)
+![new_source_connector](images/new_source_connector.png)
 
 - Type name **jdbc**
 - Click **ADD**
 
-![new_source_connector_name](vm/images/new_source_connector_name.png)
+![new_source_connector_name](images/new_source_connector_name.png)
 
 ### Add Two Topics
 
@@ -225,25 +225,25 @@ OHARA_VER=0.8.0-SNAPSHOT
 - Select **topic00**
 - Click **ADD**
 
-![new_topic](vm/images/new_topic.png)
+![new_topic](images/new_topic.png)
 
 - Click topic icon
 - Select **topic01**
 - Click **ADD**
 
-![new_topic2](vm/images/new_topic2.png)
+![new_topic2](images/new_topic2.png)
 
 ### Add a stream APP
 
 - Click stream app icon
 - Select **ohara-streamapp.jar**
 
-![new_stream](vm/images/new_stream.png)
+![new_stream](images/new_stream.png)
 
 - Type name **stream**
 - Click **ADD**
 
-![new_stream_name](vm/images/new_stream_name.png)
+![new_stream_name](images/new_stream_name.png)
 
 ### Add FTP sink connector
 
@@ -251,12 +251,12 @@ OHARA_VER=0.8.0-SNAPSHOT
 - Select **com.island.ohara.connector.ftp.FtpSink**
 - Click **ADD**
 
-![new_sink_connector](vm/images/new_sink_connector.png)
+![new_sink_connector](images/new_sink_connector.png)
 
 - Type name **ftp**
 - Click **ADD**
 
-![new_sink_connector_name](vm/images/new_sink_connector_name.png)
+![new_sink_connector_name](images/new_sink_connector_name.png)
 
 ## Use Pipeline Graph
 
@@ -269,21 +269,21 @@ OHARA_VER=0.8.0-SNAPSHOT
 - Type table name **employees**
 - Type timestamp column name **create_at**
 
-![setting_jdbc_common](vm/images/setting_jdbc_common.png)
+![setting_jdbc_common](images/setting_jdbc_common.png)
 
 - Click CORE tabs
 - Select Topics **topic00**
 - Click **TEST YOUR CONFIGS**
 - Verify that the settings are correct
 
-![setting_jdbc_core](vm/images/setting_jdbc_core.png)
+![setting_jdbc_core](images/setting_jdbc_core.png)
 
 ### Setting StreamApp
 
 - Select streamapp
 - Type column name **employee_id,first_name**
 
-![setting_stream_common](vm/images/setting_stream_common.png)
+![setting_stream_common](images/setting_stream_common.png)
 
 - Click CORE tabs
 - Select From topic of data consuming from **topic00**
@@ -291,7 +291,7 @@ OHARA_VER=0.8.0-SNAPSHOT
 - Type Instances **1**
 - Verify that the settings are correct
 
-![setting_stream_core](vm/images/setting_stream_core.png)
+![setting_stream_core](images/setting_stream_core.png)
 
 ### Setting FTP Sink Connector
 
@@ -303,20 +303,20 @@ OHARA_VER=0.8.0-SNAPSHOT
 - Type User **ohara**
 - Type Password **oharastream**
 
-![setting_sink_connector_common](vm/images/setting_sink_connector_common.png)
+![setting_sink_connector_common](images/setting_sink_connector_common.png)
 
 - Click CORE tabs
 - Select Topics **topic01**
 - Click **TEST YOUR CONFIGS**
 - Verify that the settings are correct
 
-![setting_sink_connector_core](vm/images/setting_sink_connector_core.png)
+![setting_sink_connector_core](images/setting_sink_connector_core.png)
 
 ### Start Pipeline
 
 - Click Operate **START_ICON**
 
-![start_graph](vm/images/start_graph.png)
+![start_graph](images/start_graph.png)
 
 - Wait a minute and you can see that all connectors on the graph turn green and metrics are displayed to indicate that the service started successfully.
 
@@ -324,9 +324,9 @@ OHARA_VER=0.8.0-SNAPSHOT
 
 - Enter the URL in browser's address bar [**\${FTP_URL}**](#login-oharastream)
 
-![ftp_url](vm/images/ftp_url.png)
-![ftp_output_url](vm/images/ftp_output_url.png)
-![ftp_partition_url](vm/images/ftp_partition_url.png)
-![ftp_csv_url](vm/images/ftp_csv_url.png)
+![ftp_url](images/ftp_url.png)
+![ftp_output_url](images/ftp_output_url.png)
+![ftp_partition_url](images/ftp_partition_url.png)
+![ftp_csv_url](images/ftp_csv_url.png)
 
 - You can see that the output table has already filtered two fields, **employee_id** and **first_name**.
