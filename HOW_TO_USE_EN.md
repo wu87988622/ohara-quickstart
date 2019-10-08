@@ -95,6 +95,8 @@ OHARA_VER=0.8.0-SNAPSHOT
 > Ohara ready on http://192.168.56.104:5050
 ```
 
+### Ohara Component
+
 - [Node](https://ohara.readthedocs.io/en/latest/rest/rest-nodes.html): Node is the basic unit of running service. It can be either physical machine or vm.
 
 - [Workspace](https://ohara.readthedocs.io/en/latest/user_guide.html#workspaces): A workspace contains multiple Ohara services including: Zookeepers, Brokers and Workers. You can create a workspace and add new node, topic and stream application in these pages.
@@ -133,7 +135,7 @@ OHARA_VER=0.8.0-SNAPSHOT
 
 ![workspace_list](vm/images/workspace_list.png)
 
-### [How to download postgresql drive jar?](https://jdbc.postgresql.org/download.html)
+**Posgresql is needed in the subsequent process, so we need to upload it to workspace first. ([How to download postgresql drive jar?](https://jdbc.postgresql.org/download.html))**
 
 - Type name **wk00**
 - Select Node **${HOST} or ${IP}**
