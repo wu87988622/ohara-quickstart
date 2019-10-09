@@ -10,7 +10,7 @@
 - [Create a workspace](#create-a-workspace)
 - [Create Two Topics](#create-two-topics)
 - [Upload a stream Jar](#upload-a-stream-jar)
-  - [[How to download jar?](https://github.com/oharastream/ohara-quickstart/releases/download/untagged-cf0d3622e4d0954dcb7a/ohara-streamapp.jar)](#-how-to-download-jar---https---githubcom-oharastream-ohara-quickstart-releases-download-untagged-cf0d3622e4d0954dcb7a-ohara-streamappjar-)
+  - [How to download jar?](https://github.com/oharastream/ohara-quickstart/releases/download/untagged-cf0d3622e4d0954dcb7a/ohara-streamapp.jar)
 - [Add a pipeline](#add-a-pipeline)
   - [Add a JDBC source connector](#add-a-jdbc-source-connector)
   - [Add Two Topics](#add-two-topics)
@@ -68,7 +68,7 @@
 
 ![setting_network_mac](images/mac_setting_network.png)
 
-## Login OharaStream
+## Login Ohara Quickstart VM
 
 - The default account and password are **ohara** and **oharastream**
 
@@ -184,7 +184,9 @@ OHARA_VER=0.8.0-SNAPSHOT
 
 ## Upload a stream Jar
 
-### [How to download jar?](https://github.com/oharastream/ohara-quickstart/releases/download/untagged-cf0d3622e4d0954dcb7a/ohara-streamapp.jar)
+**[StreamApp](https://ohara.readthedocs.io/en/latest/rest/rest-stream.html) has filter functionality in the next pipeline process([How to Write StreamApp with Filter Function](https://github.com/oharastream/ohara-quickstart/blob/master/stream-app/FilterStreamApp.java))**
+
+This is [jar](https://github.com/oharastream/ohara-quickstart/releases/download/untagged-cf0d3622e4d0954dcb7a/ohara-streamapp.jar) we finished beforehand.
 
 - Click **STREAM JARS**
 - Click **NEW JAR**
